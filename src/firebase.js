@@ -19,12 +19,12 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);     
 const analytics = getAnalytics(app);
 
 
-export const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
+export const auth = getAuth(app);              
+const provider = new GoogleAuthProvider();      
 
 export const signIn = () => { 
   return signInWithPopup( auth , provider)
@@ -32,5 +32,5 @@ export const signIn = () => {
   
 
 
-export const db = getFirestore(app);
+export const db = getFirestore(app);         // for database
 

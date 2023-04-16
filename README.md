@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +67,73 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+
+<!-- 1. Install Firebase in Project then create DatBase , Authentication , see code in docs in paste in code in file firebase.js 
+( 1st letter small to make it different from   frontend to user)
+
+2. in database create collection name group {it has is id } create Sub Collection --> { name , msg ,time} [ it also has it unique id] -->
+
+3. prompt to get names and Alert
+
+// -------------------------- Stuck -----------------------------------------------------------------------------------
+
+1. I thought When user click on SingIn(Login) Page it directly go to chat.js Page using Boolean value
+    Means when userSignIn false --> LogIn will show && true--> Chat.js will show
+    but Question arises how to pass As I have to pass user Data also ( like name etc ) so I use Hook useContext.
+
+2. When passing function signIn from firebase after Google Authentication I didnt knew that i return a promise 
+   I was accessing tha data directly after SigIn button clicked as a result error was coming.
+
+3. I pass Data SideBarChat.js(Add new Chat Group) --> Firebase db --> Sidebar.js ---> { name , id of gropu} ---> SidebarChat.js again
+
+   When showing data inSideBar.js ( means different Groups name and last msg ) I didnt useEffect as a result it keeps on rendering so i use it and put [] 
+
+4. White displaying data in SideBarChat.js like group name etc I was not able to see The UI so I go to docs of firebase and read about a Method Called
+
+onSnapShot ( db , elem , func ) --> It gives Real time update from firestore database. 
+
+5. when we click on specific chat room how it will navigate to that particular chat room to I put id{ collection group id from db } in path so that it will take to that
+specific room. when I was clicking on chat-room it way thinking a way to display that room other things remain same so I use useParams [ Hook ]
+
+//-----------------------   Hooks Used -------------------------------------------------------------------------------------
+
+1. UseState
+2. UseContext
+3. UseEfffect
+4. useParams  ---> react-router Hooks --> need -->  When we want to move dynamically certain part of that page we will not able to see that
+
+Ex. Home Services Nav when we click on services we go to service page But when we dynamically want to see food ( part of service page ) we change url (service/food) but
+not able to see that ----> path = "group/:groupid" [ : imp ] --> -->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
